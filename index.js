@@ -193,7 +193,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Jägermeister Shot :jaegermeister: 6cl*\nFrisch gezapft im Pckwr Glas! - Genau das Richtige für den dustigen Jägersmann? Am Besten bei -18°C verzehren."
+            "*Jägermeister Shot* :jaegermeister: 6cl\nFrisch gezapft im Pckwr Glas! - Genau das Richtige für den dustigen Jägersmann? Am Besten bei -18°C verzehren."
         },
         accessory: {
           type: "button",
