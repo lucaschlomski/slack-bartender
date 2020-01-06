@@ -375,9 +375,3 @@ async function post_to_channel() {
 
   console.log("⚡️ bar_bot is up and running!");
 })();
-
-var http = require("http");
-setInterval(function() {
-    http.get("http://pickware-bartender.herokuapp.com");
-    console.log("<kept from falling asleep>");
-}, 300000); // every 5 minutes (300000)
