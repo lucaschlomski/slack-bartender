@@ -18,7 +18,7 @@ const app = new App({
 //show as online in Slack
 rtm.start();
 
-//channel to post message
+//channel to post message; random = C48FHRR8E ; test-luca = GQVLQ43A8 ; general = C4745E0QG
 const channelId = "C48FHRR8E";
 
 
