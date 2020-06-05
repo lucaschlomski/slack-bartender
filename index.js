@@ -11,10 +11,7 @@ const signingSecret = process.env.SLACK_SIGNING_SECRET;
 
 const web = new WebClient(token, signingSecret);
 const rtm = new RTMClient(token);
-const app = new App({
-  token: process.env.SLACK_BOT_TOKEN,
-  signingSecret: process.env.SLACK_SIGNING_SECRET
-});
+const app = new App(token, signingSecret);
 
 //show as online in Slack
 rtm.start();
