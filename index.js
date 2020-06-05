@@ -19,7 +19,7 @@ const app = new App({
 rtm.start();
 
 //channel to post message; random = C48FHRR8E ; test-luca = GQVLQ43A8 ; general = C4745E0QG
-const channelId = "C48FHRR8E";
+const channelId = "GQVLQ43A8";
 
 
 //cron schedule running friday 16:00
@@ -141,7 +141,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Aperol Spritz* :champagne: 0.4l\nDie leuchtende Farbe von Aperol Spritz ist unverwechselbar und macht jeden Moment mit deinen Freunden besonders."
+            "*Aperol Spritz* :aperol_spritz: 0.4l\nsponsored by Aperol Schlomski - Die leuchtende Farbe von Aperol Spritz ist unverwechselbar und macht jeden Moment mit deinen Freunden besonders."
         },
         accessory: {
           type: "button",
@@ -167,7 +167,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Melonen Schnaps Shot* :tumbler_glass: 2cl\nsponsored by Manu - Vorsicht Suchtgefahr!"
+            "*Melonen Schnaps Shot* :watermelon: 2cl\nsponsored by Manu - Vorsicht Suchtgefahr!"
         },
         accessory: {
           type: "button",
