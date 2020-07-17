@@ -116,7 +116,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Grohe Radler* 0,33l\nFür Alle die heute mal langsam starten wollen.\n>_\"Gemach! Leicht zum Fallen führt das Eilen.\"_ -William Shakespeare"
+            "*Grohe Radler* :beers: 0,33l\nFür Alle die heute mal langsam starten wollen.\n>_\"Gemach! Leicht zum Fallen führt das Eilen.\"_ -William Shakespeare"
         },
         accessory: {
           type: "button",
