@@ -46,8 +46,22 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Die Pickware Bar ist eröffnet!*\nAlle die noch im Home Office stecken müssen sich Ihre Getränke leider selbst beschaffen."
+            "*Die Pickware Bar ist eröffnet!*\nAlle die noch im Home Office stecken müssen sich Ihre Getränke leider selbst beschaffen.\n\n*official pickware barkeeper ist heute:*"
         }
+      },
+      {
+        type: "actions",
+        elements: [
+          {
+            type: "button",
+            text: {
+              type: "plain_text",
+              emoji: true,
+              text: "Ich will unbedingt!"
+            },
+            action_id: "barkeeper_button"
+          }
+        ]
       },
       {
         type: "section",
@@ -81,7 +95,7 @@ async function post_to_channel() {
         elements: [
           {
             type: "mrkdwn",
-            text: "*Bestellungen:*"
+            text: ">*Bestellungen:*"
           }
         ]
       },
@@ -107,7 +121,7 @@ async function post_to_channel() {
         elements: [
           {
             type: "mrkdwn",
-            text: "*Bestellungen:*"
+            text: ">*Bestellungen:*"
           }
         ]
       },
@@ -116,7 +130,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Grohe Radler* :beers: 0,33l\nFür Alle die heute mal langsam starten wollen.\n>_\"Gemach! Leicht zum Fallen führt das Eilen.\"_ -William Shakespeare"
+            "*Grohe Radler* 0,33l\nFür Alle die heute mal langsam starten wollen.\n_\"Gemach! Leicht zum Fallen führt das Eilen.\"_ -William Shakespeare"
         },
         accessory: {
           type: "button",
@@ -133,7 +147,7 @@ async function post_to_channel() {
         elements: [
           {
             type: "mrkdwn",
-            text: "*Bestellungen:*"
+            text: ">*Bestellungen:*"
           }
         ]
       },
@@ -159,7 +173,7 @@ async function post_to_channel() {
         elements: [
           {
             type: "mrkdwn",
-            text: "*Bestellungen:*"
+            text: ">*Bestellungen:*"
           }
         ]
       },
@@ -185,7 +199,7 @@ async function post_to_channel() {
         elements: [
           {
             type: "mrkdwn",
-            text: "*Bestellungen:*"
+            text: ">*Bestellungen:*"
           }
         ]
       },
@@ -211,7 +225,7 @@ async function post_to_channel() {
         elements: [
           {
             type: "mrkdwn",
-            text: "*Bestellungen:*"
+            text: ">*Bestellungen:*"
           }
         ]
       },
@@ -250,10 +264,27 @@ async function post_to_channel() {
   //const messageTs = response.message.ts;
   var message = response.message;
   
+  app.action("barkeeper_button", ({ack, body}) => {
+    ack();
+    console.log(body.user.name + "ist heute barkeeper");
+    message.blocks[1] = {
+			type: "section",
+			text: {
+				type: "mrkdwn",
+				text: "*test*"
+			}
+		};
+    web.chat.update({
+      channel: channelId,
+      ts: response.message.ts,
+      blocks: message.blocks,
+    });
+  });
+
   app.action("button_1", ({ack, body}) => {
     ack();
     console.log("1x Option_1 für " + body.user.name);
-    message.blocks[4].elements[0].text += ` <@${body.user.id}>`;
+    message.blocks[5].elements[0].text += ` <@${body.user.id}>`;
     web.chat.update({
       channel: channelId,
       ts: response.message.ts,
@@ -275,7 +306,7 @@ async function post_to_channel() {
   app.action("button_3", ({ack, body}) => {
     ack();
     console.log("1x Option_3 für " + body.user.name);
-    message.blocks[8].elements[0].text += ` <@${body.user.id}>`;
+    message.blocks[9].elements[0].text += ` <@${body.user.id}>`;
     web.chat.update({
       channel: channelId,
       ts: response.message.ts,
@@ -286,7 +317,7 @@ async function post_to_channel() {
   app.action("button_4", ({ack, body}) => {
     ack();
     console.log("1x Option_4 für " + body.user.name);
-    message.blocks[10].elements[0].text += ` <@${body.user.id}>`;
+    message.blocks[11].elements[0].text += ` <@${body.user.id}>`;
     web.chat.update({
       channel: channelId,
       ts: response.message.ts,
@@ -297,7 +328,7 @@ async function post_to_channel() {
   app.action("button_5", ({ack, body}) => {
     ack();
     console.log("1x Option_5 für " + body.user.name);
-    message.blocks[12].elements[0].text += ` <@${body.user.id}>`;
+    message.blocks[13].elements[0].text += ` <@${body.user.id}>`;
     web.chat.update({
       channel: channelId,
       ts: response.message.ts,
@@ -308,7 +339,7 @@ async function post_to_channel() {
   app.action("button_6", ({ack, body}) => {
     ack();
     console.log("1x Option_6 für " + body.user.name);
-    message.blocks[14].elements[0].text += ` <@${body.user.id}>`;
+    message.blocks[15].elements[0].text += ` <@${body.user.id}>`;
     web.chat.update({
       channel: channelId,
       ts: response.message.ts,
@@ -357,7 +388,7 @@ async function post_to_channel() {
 
   app.view('view_1', async ({ ack, body, view}) => {
     ack();
-    message.blocks[17].elements[0].text += `*${view.state.values.block_1.input_1.value}* für <@${body.user.id}>\n`;
+    message.blocks[18].elements[0].text += `*${view.state.values.block_1.input_1.value}* für <@${body.user.id}>\n`;
     web.chat.update({
       channel: channelId,
       ts: response.message.ts,
