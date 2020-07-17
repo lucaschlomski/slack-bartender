@@ -271,7 +271,7 @@ async function post_to_channel() {
 			type: "section",
 			text: {
 				type: "mrkdwn",
-				text: `:party_wizard: *${body.user.name}*`
+				text: `:party_wizard: <@${body.user.name}>`
 			}
 		};
     web.chat.update({
@@ -388,7 +388,7 @@ async function post_to_channel() {
 
   app.view('view_1', async ({ ack, body, view}) => {
     ack();
-    message.blocks[18].elements[0].text += `*${view.state.values.block_1.input_1.value}* für <@${body.user.id}>\n`;
+    message.blocks[18].elements[0].text += `>*${view.state.values.block_1.input_1.value}* für <@${body.user.id}>\n`;
     web.chat.update({
       channel: channelId,
       ts: response.message.ts,
