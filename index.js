@@ -24,16 +24,16 @@ const channelId = "GQVLQ43A8";
 
 
 //cron schedule running friday 16:00
-cron.schedule("0 14 * * 5", () => {
+cron.schedule("0 14 * * *", () => {
   post_to_channel();
-  console.log("running cron schedule")
+  console.log("*running cron schedule*")
 });
 
-//listen for slack command /bar
+//listen for slack command /drinks
 app.command("/drinks", ({ack}) => {
   ack();
   post_to_channel();
-  console.log("running command");
+  console.log("*activated via slash command*");
 });
 
 //post to channel
