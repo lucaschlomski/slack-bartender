@@ -30,7 +30,7 @@ cron.schedule("0 14 * * 5", () => {
 });
 
 //listen for slack command /bar
-app.command("/bar", ({ack}) => {
+app.command("/drinks", ({ack}) => {
   ack();
   post_to_channel();
   console.log("running command");
