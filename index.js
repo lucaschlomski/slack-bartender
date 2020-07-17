@@ -295,7 +295,7 @@ async function post_to_channel() {
   app.action("button_2", ({ack, body}) => {
     ack();
     console.log("1x Option_2 für " + body.user.name);
-    message.blocks[6].elements[0].text += ` <@${body.user.id}>`;
+    message.blocks[7].elements[0].text += ` <@${body.user.id}>`;
     web.chat.update({
       channel: channelId,
       ts: response.message.ts,
