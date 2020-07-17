@@ -271,7 +271,7 @@ async function post_to_channel() {
 			type: "section",
 			text: {
 				type: "mrkdwn",
-				text: "*test*"
+				text: `:party_wizard: <@${body.user.id}>`
 			}
 		};
     web.chat.update({
