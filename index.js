@@ -24,7 +24,7 @@ const channelId = "GQVLQ43A8";
 
 
 //cron schedule running friday 16:00
-cron.schedule("30 12 * * 5", () => {
+cron.schedule("0 14 * * 5", () => {
   post_to_channel();
   console.log("running cron schedule")
 });
@@ -46,7 +46,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Die Pickware Bar ist eröffnet!*\nBar_Bot nimmt ab sofort wieder eure Bestellungen entgegen."
+            "*Die Pickware Bar ist eröffnet!*\nAlle die noch im Home Office stecken müssen sich Ihre Getränke leider selbst beschaffen."
         }
       },
       {
@@ -90,7 +90,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Grohe Hell* :beer: 0,33l\nDas Grohe-Hell ist ein solides Bier, welches die für Hell-Biere typischen, mild-süffigen Aromen aufweist. Prädikat: gut trinkbar."
+            "*Grohe Hell* :beer: 0,33l\nDas Grohe-Hell ist ein solides Bier, welches die für Hell-Biere typischen, mild-süffigen Aromen aufweist. Prädikat: _gut trinkbar_."
         },
         accessory: {
           type: "button",
@@ -116,7 +116,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "* Grohe Radler* 0,33l\nWas soll man dazu sagen?"
+            "*Grohe Radler* 0,33l\nFür Alle die heute mal langsam starten wollen.\n>_\"Gemach! Leicht zum Fallen führt das Eilen.\"_ -William Shakespeare"
         },
         accessory: {
           type: "button",
@@ -142,7 +142,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Aperol Spritz* :aperol_spritz: 0.4l\nsponsored by Aperol Schlomski - Die leuchtende Farbe von Aperol Spritz ist unverwechselbar und macht jeden Moment mit deinen Freunden besonders."
+            "*Aperol Spritz* :aperol_spritz: 0.4l\n_sponsored by Aperol Schlomski_ - Die leuchtende Farbe von Aperol Spritz ist unverwechselbar und macht jeden Moment mit deinen Freunden besonders."
         },
         accessory: {
           type: "button",
@@ -168,7 +168,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Melonen Schnaps Shot* :watermelon: 2cl\nsponsored by Manu - Vorsicht Suchtgefahr!"
+            "*Melonen Schnaps Shot* :watermelon: 2cl\n_sponsored by Manu_ - Vorsicht Suchtgefahr!"
         },
         accessory: {
           type: "button",
