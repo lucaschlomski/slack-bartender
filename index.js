@@ -46,7 +46,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Die Pickware Bar ist eröffnet!*\nAlle die noch im Home Office stecken müssen sich Ihre Getränke leider selbst beschaffen.\n\n*official pickware barkeeper ist heute:*"
+            "*Die Pickware Bar ist eröffnet!*\n\n\n*official pickware barkeeper ist heute:*"
         }
       },
       {
@@ -67,7 +67,7 @@ async function post_to_channel() {
         type: "section",
         text: {
           type: "mrkdwn",
-          text: "*Heute im Angebot:*"
+          text: "_Alle die noch im Home Office stecken müssen sich Ihre Getränke leider selbst beschaffen._\n_sry mate_\n\n\n*Heute im Angebot:*"
         }
       },
       {
@@ -266,12 +266,12 @@ async function post_to_channel() {
   
   app.action("barkeeper_button", ({ack, body}) => {
     ack();
-    console.log(body.user.name + "ist heute barkeeper");
+    console.log(body.user.name + " ist heute barkeeper");
     message.blocks[1] = {
 			type: "section",
 			text: {
 				type: "mrkdwn",
-				text: `:party_wizard: <@${body.user.id}>`
+				text: `:party_wizard: <@${body.user.id}>\n`
 			}
 		};
     web.chat.update({
