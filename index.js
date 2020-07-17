@@ -67,7 +67,7 @@ async function post_to_channel() {
         type: "section",
         text: {
           type: "mrkdwn",
-          text: "_Alle die noch im Home Office stecken müssen sich Ihre Getränke leider selbst beschaffen._\n_sry mate_\n\n\n*Heute im Angebot:*"
+          text: "_Alle die noch im Home Office stecken müssen sich Ihre Getränke leider selbst beschaffen._\n_sry mate._\n\n\n*Heute im Angebot:*"
         }
       },
       {
@@ -271,7 +271,7 @@ async function post_to_channel() {
 			type: "section",
 			text: {
 				type: "mrkdwn",
-				text: `:party_wizard: <@${body.user.id}>\n`
+				text: `:party_wizard: *${body.user.id}*`
 			}
 		};
     web.chat.update({
