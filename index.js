@@ -24,7 +24,7 @@ const channelId = "GQVLQ43A8";
 
 
 //cron schedule running friday 16:00
-cron.schedule("0 17 * * 5", () => {
+cron.schedule("0 12 35 * 5", () => {
   post_to_channel();
   console.log("running cron schedule")
 });
