@@ -24,7 +24,7 @@ const channelId = "GQVLQ43A8";
 
 
 //cron schedule running friday 16:00
-cron.schedule("0 16 * * *", () => {
+cron.schedule("0 14 * * 4", () => {
   post_to_channel();
   console.log("*running cron schedule*")
 });
@@ -401,6 +401,5 @@ async function post_to_channel() {
 (async () => {
   // Start your app
   await app.start(process.env.PORT || 3000);
-
   console.log("⚡️ bar_bot is up and running!");
 })();
