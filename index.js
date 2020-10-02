@@ -78,7 +78,7 @@ async function post_to_channel() {
         text: {
           type: "mrkdwn",
           text:
-            "*Tegernseer Helles* :beer: 0,5l\nLeckeres bayrisches Helles. Schöne Farbe , leichte Säure , leicht bitter, Hopfen eher zurückhaltend. Ein Bier das gefallen will, auch gefällt. Trinken kann man das scho guat."
+            "*Augustiner Lagerbier Hell* :beer: 0,5l\nLeckeres bayrisches Helles. Schöne Farbe , leichte Säure , leicht bitter, Hopfen eher zurückhaltend. Ein Bier das gefallen will, auch gefällt. Trinken kann man das scho guat."
         },
         accessory: {
           type: "button",
