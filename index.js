@@ -29,7 +29,7 @@ const channelId = "GQVLQ43A8";
 //  console.log("*running cron schedule*")
 //});
 
-//listen for slack command /drinks
+//listen for slack command /drinks and determine barkeeper
 app.command("/drinks", ({ack}) => {
   ack();
   post_to_channel(command.user);
