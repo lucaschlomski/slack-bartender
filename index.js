@@ -20,7 +20,7 @@ const app = new App({
 rtm.start();
 
 //channel to post message; random = C48FHRR8E ; test-luca = GQVLQ43A8 ; general = C4745E0QG
-const channelId = "C48FHRR8E";
+const channelId = "GQVLQ43A8";
 
 
 //cron schedule running friday 16:00
@@ -32,12 +32,12 @@ cron.schedule("0 14 * * 5", () => {
 //listen for slack command /drinks
 app.command("/drinks", ({ack}) => {
   ack();
-  post_to_channel();
+  post_to_channel(command.user);
   console.log("*activated via slash command*");
 });
 
 //post to channel
-async function post_to_channel() {
+async function post_to_channel(barkeeper) {
   var response = await web.chat.postMessage({
     channel: channelId,
     blocks: [
@@ -50,18 +50,10 @@ async function post_to_channel() {
         }
       },
       {
-        type: "actions",
-        elements: [
-          {
-            type: "button",
-            text: {
-              type: "plain_text",
-              emoji: true,
-              text: "Ich will unbedingt!"
-            },
-            action_id: "barkeeper_button"
-          }
-        ]
+        type: "section",
+			  text: {
+				  type: "mrkdwn",
+				  text: `:party_wizard: <@${barkeeper}>`
       },
       {
         type: "section",
