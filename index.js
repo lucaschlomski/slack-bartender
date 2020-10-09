@@ -53,7 +53,8 @@ async function post_to_channel(barkeeper) {
         type: "section",
 			  text: {
 				  type: "mrkdwn",
-				  text: `:party_wizard: <@${barkeeper}>`
+          text: `:party_wizard: <@${barkeeper}>`
+        }
       },
       {
         type: "section",
