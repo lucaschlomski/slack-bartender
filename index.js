@@ -32,12 +32,12 @@ const channelId = "GQVLQ43A8";
 //listen for slack command /drinks and determine barkeeper
 app.command("/drinks", ({ack}) => {
   ack();
-  post_to_channel(command.user);
+  post_to_channel();
   console.log("*activated via slash command*");
 });
 
 //post to channel
-async function post_to_channel(barkeeper) {
+async function post_to_channel() {
   var response = await web.chat.postMessage({
     channel: channelId,
     blocks: [
@@ -50,11 +50,18 @@ async function post_to_channel(barkeeper) {
         }
       },
       {
-        type: "section",
-			  text: {
-				  type: "mrkdwn",
-          text: `:party_wizard: <@${barkeeper}>`
-        }
+        type: "actions",
+        elements: [
+          {
+            type: "button",
+            text: {
+              type: "plain_text",
+              emoji: true,
+              text: "Ich will unbedingt!"
+            },
+            action_id: "barkeeper_button"
+          }
+        ]
       },
       {
         type: "section",
