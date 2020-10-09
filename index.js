@@ -24,10 +24,10 @@ const channelId = "GQVLQ43A8";
 
 
 //cron schedule running friday 16:00
-cron.schedule("0 14 * * 5", () => {
-  post_to_channel();
-  console.log("*running cron schedule*")
-});
+//cron.schedule("0 14 * * 5", () => {
+//  post_to_channel();
+//  console.log("*running cron schedule*")
+//});
 
 //listen for slack command /drinks
 app.command("/drinks", ({ack}) => {
@@ -70,7 +70,7 @@ async function post_to_channel(barkeeper) {
         text: {
           type: "mrkdwn",
           text:
-            "*Tegernseer Helles* :beer: 0,5l\nLeckeres bayrisches Helles. Schöne Farbe , leichte Säure , leicht bitter, Hopfen eher zurückhaltend. Ein Bier das gefallen will, auch gefällt. Trinken kann man das scho guat."
+            "*Augustiner Lagerbier Hell* :beer: 0,5l\nLeckeres bayrisches Helles. Schöne Farbe , leichte Säure , leicht bitter, Hopfen eher zurückhaltend. Ein Bier das gefallen will, auch gefällt. Trinken kann man das scho guat."
         },
         accessory: {
           type: "button",
