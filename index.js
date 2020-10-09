@@ -20,7 +20,7 @@ const app = new App({
 rtm.start();
 
 //channel to post message; random = C48FHRR8E ; test-luca = GQVLQ43A8 ; general = C4745E0QG
-const channelId = "GQVLQ43A8";
+const channelId = "C48FHRR8E";
 
 
 //cron schedule running friday 16:00
