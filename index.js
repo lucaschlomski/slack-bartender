@@ -39,7 +39,7 @@ app.command("/drinks", async ({ack, command}) => {
 
 //post to channel
 async function post_to_channel(barkeeper) {
-  var response = await web.chat.postMessage(barkeeper, {
+  var response = await web.chat.postMessage({
     channel: channelId,
     blocks: [
       {
