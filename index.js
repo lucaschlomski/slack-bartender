@@ -30,7 +30,7 @@ const channelId = "GQVLQ43A8";
 //});
 
 //listen for slack command /drinks and determine barkeeper
-app.command("/drinks", async ({ack}) => {
+app.command("/drinks", async ({ack, command}) => {
   ack();
   post_to_channel();
   console.log("*activated via slash command*");
