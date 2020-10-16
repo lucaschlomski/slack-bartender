@@ -47,7 +47,7 @@ async function post_to_channel(barkeeper) {
         text: {
           type: "mrkdwn",
           text:
-          "*Die Pickware Bar ist eröffnet!*\n\n\n*official pickware barkeeper ist heute>*"
+          "*Die Pickware Bar ist eröffnet!*\n\n\n*official pickware barkeeper ist heute*"
         }
       },
       {
