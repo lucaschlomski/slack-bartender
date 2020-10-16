@@ -34,7 +34,7 @@ app.command("/drinks", async ({ack, command}) => {
   ack();
   post_to_channel();
   console.log("*activated via slash command*");
-  await console.log(command.user_id)
+  await say(` <@${command.user_id}>`)
 });
 
 //post to channel
