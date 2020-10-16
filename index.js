@@ -30,14 +30,15 @@ const channelId = "C48FHRR8E";
 //});
 
 //listen for slack command /drinks and determine barkeeper
-app.command("/drinks", ({ack}) => {
+app.command("/drinks", async ({ack, command}) => {
   ack();
-  post_to_channel();
+   await post_to_channel(command.user_id);
   console.log("*activated via slash command*");
+  await console.log(command.user_name)
 });
 
 //post to channel
-async function post_to_channel() {
+async function post_to_channel(barkeeper) {
   var response = await web.chat.postMessage({
     channel: channelId,
     blocks: [
@@ -45,23 +46,15 @@ async function post_to_channel() {
         type: "section",
         text: {
           type: "mrkdwn",
-          text:
-            "*Die Pickware Bar ist eröffnet!*\n\n\n*official pickware barkeeper ist heute:*"
+          text:"*Die Pickware Bar ist eröffnet!*\n\n\n*official pickware barkeeper ist heute:*"
         }
       },
       {
-        type: "actions",
-        elements: [
-          {
-            type: "button",
-            text: {
-              type: "plain_text",
-              emoji: true,
-              text: "Ich will unbedingt!"
-            },
-            action_id: "barkeeper_button"
-          }
-        ]
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: `:party_wizard: <@${barkeeper}>`
+        }
       },
       {
         type: "section",
