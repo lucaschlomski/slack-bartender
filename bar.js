@@ -1,3 +1,5 @@
+//this module iscurrently not in use
+
 //post to channel
 async function post_to_channel() {
   var response = await web.chat.postMessage({
