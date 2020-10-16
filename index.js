@@ -47,22 +47,15 @@ async function post_to_channel(barkeeper) {
         text: {
           type: "mrkdwn",
           text:
-          `*Die Pickware Bar ist eröffnet!*\n\n\n*official pickware barkeeper ist heute\n<@${barkeeper}>*`
+          "*Die Pickware Bar ist eröffnet!*\n\n\n*official pickware barkeeper ist heute>*"
         }
       },
       {
-        type: "actions",
-        elements: [
-          {
-            type: "button",
-            text: {
-              type: "plain_text",
-              emoji: true,
-              text: "Ich will unbedingt!"
-            },
-            action_id: "barkeeper_button"
-          }
-        ]
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: `:party_wizard: <@${barkeeper}>`
+        }
       },
       {
         type: "section",
