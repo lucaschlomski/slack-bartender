@@ -1,5 +1,5 @@
 require('dotenv').config()
-require('./messsage')
+require('./message')
 
 const { App, AwsLambdaReceiver } = require('@slack/bolt')
 const cron = require("cron").CronJob
