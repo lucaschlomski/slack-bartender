@@ -35,7 +35,7 @@ async function send_message(barkeeper) {
 		}
 	}
   app.client.chat.postMessage({
-    channel: channel.testLuca,
+    channel: channel.random,
     text: "bar selection message",
     blocks: barMessage
   })
