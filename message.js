@@ -1,3 +1,5 @@
+require('./app')
+
 barMessage = [
   {
     type: "section",
