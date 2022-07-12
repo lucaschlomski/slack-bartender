@@ -12,7 +12,7 @@ barMessage = [
     type: "section",
     text: {
       type: "mrkdwn",
-      text: `no one :sadge:`
+      text: `:party_wizard: <@${barkeeper}>`
     }
   },
   {
