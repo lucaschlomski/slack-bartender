@@ -1,3 +1,5 @@
+require('./app')
+
 var barkeeper
 
 barMessage = [
