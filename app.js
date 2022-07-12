@@ -21,20 +21,19 @@ const channel = {
 // listen for slack command /openbar and determine barkeeper
 app.command("/openbar", async ({ack, command}) => {
   ack()
-  barkeeper = command.user_id
   await send_message(command.user_id)
   console.log(command.user_name + " opened the bar via a command")
 })
 
 // send message
 async function send_message(barkeeper) {
-  // barMessage[1] = {
-	// 	type: "section",
-	// 	text: {
-	// 		type: "mrkdwn",
-	// 		text: `:party_wizard: <@${barkeeper}>`
-	// 	}
-	// }
+  barMessage[1] = {
+		type: "section",
+		text: {
+			type: "mrkdwn",
+			text: `:party_wizard: <@${barkeeper}>`
+		}
+	}
   app.client.chat.postMessage({
     channel: channel.testLuca,
     text: "bar selection message",
@@ -118,7 +117,6 @@ app.action("button_6", async ({ack, body}) => {
 app.action("extra_button", async ({ack, body}) => {
   await ack()
   app.client.views.open({
-    token: token,
     trigger_id: body.trigger_id,
     view: barModal
   })
