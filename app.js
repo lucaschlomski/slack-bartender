@@ -113,6 +113,8 @@ app.action("button_6", async ({ack, body}) => {
   update_message(body.message.blocks, body.container.channel_id, body.container.message_ts)
 })
 
+var message
+
 // open pop-up Extrawünsche
 app.action("extra_button", async ({ack, body}) => {
   await ack()
