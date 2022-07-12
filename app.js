@@ -125,8 +125,9 @@ app.action("extra_button", async ({ack, body}) => {
 // Extrawünsche
 app.view('view_1', async ({ ack, body, view}) => {
   await ack()
-  body.message.blocks[18].elements[0].text += `>*${view.state.values.block_1.input_1.value}* für <@${body.user.id}>\n`
-  update_message(body.message.blocks, body.container.channel_id, body.container.message_ts)
+  console.log(body)
+  // body.message.blocks[18].elements[0].text += `>*${view.state.values.block_1.input_1.value}* für <@${body.user.id}>\n`
+  // update_message(body.message.blocks, body.container.channel_id, body.container.message_ts)
   console.log("extrawunsch für " + body.user.name)
 })
 
