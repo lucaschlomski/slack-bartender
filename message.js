@@ -1,7 +1,5 @@
 require('./app')
 
-var barkeeper
-
 barMessage = [
   {
     type: "section",
@@ -14,7 +12,7 @@ barMessage = [
     type: "section",
     text: {
       type: "mrkdwn",
-      text: `:party_wizard: <@${barkeeper}>`
+      text: `no one :sadge:`
     }
   },
   {
