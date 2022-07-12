@@ -1,20 +1,17 @@
 {
-  "name": "bar_bot",
-  "version": "1.0.0",
+  "name": "slack-bartender",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.js",
-  "start": "node index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luca Schlomski",
   "license": "ISC",
   "dependencies": {
-    "@slack/bolt": "^1.4.1",
-    "@slack/rtm-api": "^5.0.3",
-    "@slack/web-api": "^5.6.0",
-    "dotenv": "^8.2.0",
+    "@slack/bolt": "^3.11.3",
+    "dotenv": "^16.0.1",
     "fs": "0.0.1-security",
-    "node-cron": "^2.0.3"
+    "cron": "^2.0.0"
   }
 }
