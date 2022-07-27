@@ -180,6 +180,32 @@ barMessage = [
     ]
   },
   {
+    type: "section",
+    text: {
+      type: "mrkdwn",
+      text:
+        "*Protein Shake (_à la Flo Faatz_)* :weightlifter:\nFür die gym lads unter euch! - _expizit gewünscht von Erik_"
+    },
+    accessory: {
+      type: "button",
+      text: {
+        type: "plain_text",
+        emoji: true,
+        text: "1x bidde"
+      },
+      action_id: "button_7"
+    }
+  },
+  {
+    type: "context",
+    elements: [
+      {
+        type: "mrkdwn",
+        text: ">*Bestellungen:*"
+      }
+    ]
+  },
+  {
     type: "divider"
   },
   {
