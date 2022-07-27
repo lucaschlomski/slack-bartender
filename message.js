@@ -132,7 +132,7 @@ barMessage = [
     text: {
       type: "mrkdwn",
       text:
-        "*Melonen Schnaps Shot* :watermelon: 2cl\n_sponsored by Manu_ - Vorsicht Suchtgefahr!"
+        "*Shots* :tumbler_glass: 2cl\n_Egal was, hauptsache Shots!_ - Irgendeinen shotbaren Alkohole aus der Pickware Bar"
     },
     accessory: {
       type: "button",
